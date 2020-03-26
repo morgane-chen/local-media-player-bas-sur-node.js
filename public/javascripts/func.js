@@ -26,8 +26,30 @@ var agran = 1;
 var scale = 1;
 var rotate = 0;
 var sym = 0;
+var test = 0;
 
+
+function sound(){
+	var voice = $("#btnsound");
+	 video = $("#v video");
+	video[0].volume = voice[0].value/100;	
+}
+function muet(){
+	//console.log(voice);
+	video = $("#v video");
+	video[0].volume = 0;
+	var voice = $("#btnsound");
+	voice[0].value = 0;
+}
+function Time(){	
+	var progress = $("#btntime");
+	video = $("#v video");
+	var duration = video[0].duration;
+    video[0].currentTime = progress[0].value;
+
+	}
 function Go(){
+		test = 1;
         btnstart.innerHTML = "Play";
         video[0].pause();
         time = setInterval(function () {
@@ -35,6 +57,7 @@ function Go(){
         }, 1000);
     };//la fonction d'accélérer la vidéo
 function Back(){
+	test = 1;
        btnstart.innerHTML = "Play";
         video[0].pause();
         time = setInterval(function () {
@@ -50,7 +73,7 @@ function play() {
 	 video = $("#v video");
 	 video[0].time=video[0].currentTime;
 	 var play =$("#btnstart");
-	 console.log(typeof(play[0].innerHTML));
+	// console.log(typeof(play[0].innerHTML));
         if (play[0].innerHTML == "Play") {
             video[0].play();
             play[0].innerHTML = "Pause";
@@ -63,15 +86,15 @@ function play() {
 }//la fonction du bouton Play/Pause
 function playNextVideo() {
 	var b = document.getElementById("cataBox").childNodes;
-	console.log(b[1],b[2]);
+	//console.log(b[1],b[2]);
     songNum = songNum + 1;// le numéro de vidéo suivante
-    console.log(songNum);
+   // console.log(songNum);
     if (songNum == songTotal) {
         songNum=0;
         var i = songTotal-1;
     }
     else{var i =songNum-1;}
-    console.log(songNum);
+   // console.log(songNum);
 	var b = document.getElementById("cataBox").childNodes;
 	//var i = songNum -1;
 	b[i].style.color="white"; 					
@@ -92,7 +115,7 @@ function playNextVideo() {
 function playLastImage() {
 	initImage();
     songNum = songNum - 1;//2
-    console.log(songNum);
+   // console.log(songNum);
     if (songNum == -1) {
         songNum = songTotal-1;//la dernière photo
         var i = 0;
@@ -118,13 +141,13 @@ function playLastImage() {
 function playNextImage() {
 	initImage();
     songNum = songNum + 1;//2
-    console.log(songNum);
+    //console.log(songNum);
     if (songNum == songTotal) {
         songNum=0;
         var i = songTotal-1;
     }//si dépasser le nombre total des images
     else{var i =songNum-1;}
-    console.log(songNum);
+    //console.log(songNum);
 	var b = document.getElementById("cataBox").childNodes;
 	//var i = songNum -1;
 	b[i].style.color="white"; 					
@@ -145,7 +168,7 @@ function playLastVideo() {
 	var play =$("#btnstart");
 	play[0].innerHTML = "Pause";
     songNum = songNum - 1;//2
-    console.log(songNum);
+   // console.log(songNum);
     if (songNum == -1) {
         songNum = songTotal-1;//la dernière vidéo
         var i = 0;
@@ -170,7 +193,7 @@ function playLastVideo() {
 function playNextSong() {
 
     songNum = songNum + 1;//2
-    console.log(songNum);
+   // console.log(songNum);
     if (songNum == songTotal) {
         songNum=0;
         var i = songTotal-1;
@@ -181,7 +204,7 @@ function playNextSong() {
 	b[i].style.color="white"; 					
     b[songNum].style.color="red";                
     audioAddress=prefix+songName[songNum]+".mp3";
-    console.log(audioAddress);
+   // console.log(audioAddress);
     imageAddress=prefix+songName[songNum]+".png";
 
     document.getElementById("audioSrc").src =audioAddress;
@@ -307,17 +330,17 @@ function getChange2(e){
  					
                       if(b[i].value==musicName){
                       	  songNum = i;
-                      	  console.log(i);
+                      	 // console.log(i);
                           b[i].style.color="red";
                           var src = b[i].src;
                           sourceDom = src;  
-                          console.log(sourceDom);
+                         // console.log(sourceDom);
                           video = $("#v video")
                           
                           video[0].src =sourceDom ;
    						  $("#v").show();
    						  //console.log($("#v video"));
-   						  console.log(video[0]);
+   						 // console.log(video[0]);
   						  video[0].play(); 
   						  video[0].onplaying = function () {
        							 var allTime = this.duration;
@@ -359,8 +382,8 @@ function getChange3(e){
 	ctx.clearRect(0,0,canvas[0].width,canvas[0].height);  
   	
 	
-	console.log(musicName);
-	console.log(b);
+	//console.log(musicName);
+	//console.log(b);
 	for (var i=0;i<b.length;i++) {
                      b[i].style.color="white";
 //                     
@@ -370,8 +393,8 @@ function getChange3(e){
   						  songNum  = i; 
                       	   var myImage = new Image();
         					 myImage.src = b[i].src;
-                      	  console.log(b[i].src);
-                      	  console.log(myImage.src);
+                      	 // console.log(b[i].src);
+                      	 // console.log(myImage.src);
                       	  //canvas[0].style.display="online";
                       	 myImage.onload = function() {
  							 ctx.drawImage(myImage, 0, 0,canvas[0].width, canvas[0].height);
@@ -398,7 +421,7 @@ function showCatalog(){
     prefix=prefix.slice(9);//../public/resource/likes=》/resource/likes
 
     catalog1 = temp.split('*');
-     console.log(catalog1);
+    // console.log(catalog1);
     songTotal = catalog1.length - 1;
 
     
@@ -452,9 +475,9 @@ function showCatalogVideo(){
     prefix=prefix.slice(9);
 
     catalog1 = temp.split('*');
-    console.log(catalog1);
+    //console.log(catalog1);
     songTotal = catalog1.length - 1;
-    console.log(songTotal);
+    //console.log(songTotal);
 	
 
     
@@ -518,7 +541,7 @@ function showCatalogImage(){
  //       console.log(p+"agafs");
         p.id = i;
         p.src=  prefix + musicName + ".jpg";
-        console.log(p.src);
+        //console.log(p.src);
         var changeMusic =  document.getElementById(i);
         //console.log(changeMusic);
         document.getElementById("cataBox").appendChild(p);
@@ -597,7 +620,6 @@ function hideBtnVideo(){
 function showBtnVideo(){
 	document.getElementById("buttonLastVideo").style.display="inline";
 	document.getElementById("buttonNextVideo").style.display="inline";
-	console.log("qjdu");
 	document.getElementById("buttonGo").style.display="inline";
 	document.getElementById("buttonBack").style.display="inline";
 	document.getElementById("buttonicontime").style.display="inline";
@@ -662,7 +684,7 @@ function InverseColor(){
 function DiminuerImag(){
 	dimi = dimi+1;
 	scale = 1/dimi*agran;
-	console.log(dimi);
+	//console.log(dimi);
 	 canvas[0].height = canvas[0].height;
 	 canvas[0].width = canvas[0].width; 
 	 ctx = canvas[0].getContext('2d'); 
@@ -692,7 +714,7 @@ function DiminuerImag(){
 function AgrandirImag(){
     agran = agran+1;
     scale = agran/dimi;
-    console.log(agran);
+   // console.log(agran);
 	 canvas[0].height = canvas[0].height;
 	 canvas[0].width = canvas[0].width; 
 	 ctx = canvas[0].getContext('2d'); 
@@ -726,8 +748,8 @@ function SymetriserImag(){
 	var b = document.getElementById("cataBox").childNodes;
 	var imgsrc = b[songNum].src;
 	
-	console.log('ahsg');
-	console.log(imgsrc);
+	//console.log('ahsg');
+	//console.log(imgsrc);
 	var img = new Image();
 	img.src = imgsrc;
 	ctx.translate(canvas[0].width/2, canvas[0].height/2);
@@ -754,7 +776,7 @@ function RotateImag(){
 
 	var img = new Image();
 	img.src = imgsrc;
-		console.log(img.src);
+		//console.log(img.src);
 	ctx.translate(canvas[0].width/2, canvas[0].height/2);
 	ctx.rotate(rotate*45*Math.PI/180);
 	ctx.translate(-canvas[0].width/2, -canvas[0].height/2);
@@ -766,6 +788,9 @@ function RotateImag(){
 }
 
 function initImage(){
+	dimi = 1;
+	agran = 1;
+	scale = 1;
 	canvas = $("#c canvas");
 	canvas[0].height = canvas[0].height;
 	 canvas[0].width = canvas[0].width; 

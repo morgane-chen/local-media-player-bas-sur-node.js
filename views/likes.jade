@@ -40,10 +40,10 @@ html
         button.buttonGo#buttonGo(type = 'button', onclick = "Go()") Go
         button.buttonBack#buttonBack(type = 'button', onclick = "Back()") Back
         button.buttonicontime#buttonicontime(type = 'button') time
-        input.btntime#btntime(type='range', value='0', max='100') 
+        input.btntime#btntime(type='range', value='0',min='0', max='100', onclick="Time()") 
         button.btnstart#btnstart(type = 'button', onclick = "play()") Pause
-        input.btnsound#btnsound(type='range', value='0', max='100', onmousedown = "sound()")
-        button.buttoniconsound#buttoniconsound(type = 'button') sound
+        input.btnsound#btnsound(type='range', min='0', value='50', max='100', onclick = "sound()")
+        button.buttoniconsound#buttoniconsound(type = 'button', onclick = "muet()") Muet
         button.buttonLastImage#buttonLastImage(type = 'button', onclick = "playLastImage()") Precédent
         button.buttonNextImage#buttonNextImage(type = 'button', onclick = "playNextImage()") Suivante
         button.buttonInverseColor#buttonInverseColor(type = 'button', onclick = "InverseColor()") Inverse Color
