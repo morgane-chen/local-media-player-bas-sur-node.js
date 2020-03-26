@@ -1,0 +1,80 @@
+doctype html
+html
+    head
+        title.titleID=title
+        script(src='/javascripts/func.js').
+        script(src = '/javascripts/jquery.js').
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        audio.Audio#myMusic(controls = 'controls',autoplay="autoplay")
+            source#audioSrc(type = 'audio/mpeg')
+
+        p
+            img.musicImg#musicImg(alt="Just Play It !")
+
+            img.background(src= '/images/background.jpg')
+
+        p.v#v   
+            video.myVideo#myVideo(src ='')
+        p.c#c
+            canvas.myCanvas#myCanvas(src = '')
+        h.hide#test=catalogMusic
+        h.hide#video=catalogVideo
+        h.hide#image=catalogImage
+
+
+        button.buttonLast#buttonLast(type = 'button', onclick = "playLastSong()") Precédent
+        button.buttonNext#buttonNext(type = 'button', onclick = "playNextSong()") Suivante
+        button.lyricsShow#lyricsShow(type = 'button', onclick = "showLyrics()")  Afficher les Paroles
+        button.lyricsHide#lyricsHide(type = 'button', onclick = "hideLyrics()") Cacher les Paroles
+        button.catalogShow#catalogShow(type="button", onclick="showCatalog()") Music Catalogue
+        button.catalogHide#catalogHide(type="button",onclick="hideCatalog()") Cacher Music catalogue
+        button.catalogShowImage#catalogShowImage(type="button", onclick="showCatalogImage()") Image Catalogue
+        button.catalogHideImage#catalogHideImage(type="button",onclick="hideCatalogImage()") Cacher Image catalogue
+        button.catalogShowVideo#catalogShowVideo(type="button", onclick="showCatalogVideo()") Video Catalogue
+        button.catalogHideVideo#catalogHideVideo(type="button",onclick="hideCatalogVideo()") Cacher Video catalogue
+        button.repeatAllSongs#repeatAllSongs(type="button",onclick="repeatAllSongs()") Cycle
+        button.repeatCurrentSong#repeatCurrentSong(type="button",onclick="repeatCurrentSong()") Unique              
+        button.buttonLastVideo#buttonLastVideo(type = 'button', onclick = "playLastVideo()") Last one
+        button.buttonNextVideo#buttonNextVideo(type = 'button', onclick = "playNextVideo()") Next one
+        button.buttonGo#buttonGo(type = 'button', onclick = "Go()") Go
+        button.buttonBack#buttonBack(type = 'button', onclick = "Back()") Back
+        button.buttonicontime#buttonicontime(type = 'button') time
+        input.btntime#btntime(type='range', value='0', max='100') 
+        button.btnstart#btnstart(type = 'button', onclick = "play()") Pause
+        input.btnsound#btnsound(type='range', value='0', max='100', onmousedown = "sound()")
+        button.buttoniconsound#buttoniconsound(type = 'button') sound
+        button.buttonLastImage#buttonLastImage(type = 'button', onclick = "playLastImage()") Precédent
+        button.buttonNextImage#buttonNextImage(type = 'button', onclick = "playNextImage()") Suivante
+        button.buttonInverseColor#buttonInverseColor(type = 'button', onclick = "InverseColor()") Inverse Color
+        button.buttonDiminuerImag#buttonDiminuerImag(type = 'button', onclick = "DiminuerImag()") Diminuer Image
+        button.buttonAgrandirImag#buttonAgrandirImag(type = 'button', onclick = "AgrandirImag()") Agrandir Image
+        button.buttonSymetriserImag#buttonSymetriserImag(type = 'button', onclick = "SymetriserImag()") Symetriser Image
+        button.buttonRotateImag#buttonRotateImag(type = 'button', onclick = "RotateImag()") Rotate Image
+        button.buttonInitImag#buttonInitImag(type = 'button', onclick = "initImage()") Initialiser Image
+        
+        nav
+            ul
+                li
+                    a.likes_homepage(href='/') Homepage
+                li
+                    a.dislikes_likes(href='likes') Likes
+                li
+                    a.likes_dislikes(href='dislikes') Dislikes
+        .outer-container#lyricsBox
+            .inner-container
+                .content#lyrics
+
+
+        .cataBox2#cataBox2
+            .cataBox1
+               .cataBox#cataBox
+
+
+        .hide#prefix=getPrefix
+
+        
+        
+
+
+

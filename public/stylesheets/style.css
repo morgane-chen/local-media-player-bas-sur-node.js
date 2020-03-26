@@ -1,0 +1,510 @@
+#v{
+  position:absolute;
+  top:0px;
+  left:400px;
+  width:700px;
+  height:400px;
+  z-index: 1;
+  font-size: 200%;
+  color: floralwhite;
+  }
+.v{
+  position:absolute;
+  top:0px;
+  left:400px;
+  width:700px;
+  height:400px;
+  z-index: 1;
+  font-size: 200%;
+  color: floralwhite;
+}
+#c{
+  position:absolute;
+  top:0px;
+  left:400px;
+  width:700px;
+  height:400px;
+  z-index: 1;
+  font-size: 200%;
+  color: floralwhite;
+  }
+.c{
+  position:absolute;
+  top:0px;
+  left:400px;
+  width:700px;
+  height:400px;
+  z-index: 1;
+  font-size: 200%;
+  color: floralwhite;
+}
+canvas{
+	position:absolute;
+  top:0px;
+  left:0px;
+  width:700px;
+  height:400px;
+  display: none;
+  border: 1px solid #000;
+
+	
+}
+video {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+
+
+.buttonInverseColor{
+	display: none;
+  position:absolute;
+  top:480px;
+  left:540px;
+	
+}
+
+.buttonInitImag{
+	display: none;
+  position:absolute;
+	top:550px;
+  left:626px;
+	
+}
+
+.buttonDiminuerImag{
+	display: none;
+  position:absolute;
+  top:480px;
+  left:430px;
+	
+}
+.buttonAgrandirImag{
+	display: none;
+  position:absolute;
+  top:480px;
+  left:630px;	
+	
+}
+
+.buttonSymetriserImag{
+	display: none;
+  position:absolute;
+  top:480px;
+  left:735px;		
+	
+}
+.buttonRotateImag{
+	display: none;
+  position:absolute;
+  top:480px;
+  left:850px;			
+	
+}
+
+.buttonLastImage{
+  display: none;
+  position:absolute;
+  top:550px;
+  left:550px;
+}
+
+.buttonNextImage{
+  display: none;
+  position:absolute;
+  top:550px;
+  left:730px;
+}
+.buttonLastVideo{
+  display: none;
+  position:absolute;
+  top:550px;
+  left:350px;
+}
+
+.buttonNextVideo{
+  display: none;
+  position:absolute;
+  top:550px;
+  left:430px;
+}
+.btntime{
+  display: none;
+  position:absolute;
+  top:550px;
+  left:550px;
+}
+.buttonicontime{
+  display: none;
+  position:absolute;
+  top:550px;
+  left:510px;
+}
+.btnstart{
+  display: none;
+  position:absolute;
+  top:550px;
+  left:700px;
+}
+.btnsound{
+  display: none;
+  position:absolute;
+  top:550px;
+  left:840px;
+}
+.buttoniconsound{
+  display: none;
+  position:absolute;
+  top:550px;
+  left:800px;
+}
+.buttonGo{
+  display: none;
+  position:absolute;
+  top:520px;
+  left:550px;
+}
+.buttonBack{
+  display: none;
+  position:absolute;
+  top:520px;
+  left:650px;
+}
+
+
+
+
+
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.titleID{
+
+  text-align:center;
+  font-size:500%;
+}
+
+.testCss{
+  color: brown;
+}
+
+.Audio{
+	display: none;
+  position:absolute;
+  top:540px;
+  height:40px;
+  width:280px;
+  left: 780px;
+}
+
+
+.background{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+
+.musicImg{
+  position:absolute;
+  top:100px;
+  left:760px;
+  width:350px;
+  height:350px;
+  z-index: 1;
+  font-size: 200%;
+  color: floralwhite;
+}
+
+
+.songTitle{
+  position:absolute;
+  top:20px;
+  left:620px;
+  color: floralwhite;
+  font-size: 200%;
+}
+
+.outer-container,.content {
+  width: 300px;
+  height: 400px;
+}
+
+.outer-container {
+  position: absolute;
+  left:500px;
+  top:100px;
+  overflow: hidden;
+}
+
+.inner-container {
+  position: absolute;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.content{
+  cursor:grab;
+  color:#666666;
+}
+
+.hide{
+  display: none;
+}
+
+.cataBox,.cataBox2{
+  width: 200px;
+  height: 300px;
+}
+.cataBox2{
+  position: absolute;
+  left:140px;
+  top:330px;
+  overflow: hidden;
+}
+
+.cataBox1{
+  position: absolute;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.cataBox{
+  cursor:grab;
+  color:#666666;
+}
+
+
+.test2{
+  color:floralwhite;
+  top:200px;
+  left:200px;
+  width:300px;
+  height:500px;
+  overflow-y: auto;
+}
+
+.head{
+  text-align:center;
+  color: #999999;
+  font-size:500%;
+  text-shadow: 5px 5px 5px #666666;
+}
+
+
+.homepage{
+  display: inline-block;
+  padding-left: 60px;
+  padding-right: 60px;
+  height: 38px;
+  left:400px;
+  line-height: 40px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#CCCCCC), to(#999999));
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.likes_homepage{
+  display: inline-block;
+  height: 38px;
+  line-height: 40px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#CCCCCC), to(#999999));
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.likes_dislikes{
+  display: inline-block;
+  height: 38px;
+  padding-left: 13px;
+  padding-right: 13px;
+  line-height: 40px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#CCCCCC), to(#999999));
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.dislikes_likes{
+  display: inline-block;
+  height: 38px;
+  padding-left: 25px;
+  padding-right: 25px;
+  line-height: 40px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#CCCCCC), to(#999999));
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.likes_homepage{
+
+  position: absolute;
+  left:100px;
+  top:80px;
+}
+.dislikes_likes{
+
+  position: absolute;
+  left:100px;
+  top:118px;
+}
+.likes_dislikes{
+
+  position: absolute;
+  left:100px;
+  top:156px;
+}
+.btnlist{
+  text-align: center;
+}
+
+.catalogHide,.catalogShow,.catalogHideVideo,.catalogShowVideo,.catalogHideImage,.catalogShowImage{
+  display: inline-block;
+  height: 38px;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 40px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#CCCCCC), to(#999999));
+  color: #666666;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.catalogHide{
+  display:none;
+  position: absolute;
+  left:100px;
+  top:230px;
+}
+.catalogShow{
+  position: absolute;
+  left:100px;
+  top:230px;
+}
+.catalogHideVideo{
+  display:none;
+  position: absolute;
+  left:100px;
+  top:265px;
+}
+.catalogShowVideo{
+  position: absolute;
+  left:100px;
+  top:265px;
+}
+.catalogHideImage{
+  display:none;
+  position: absolute;
+  left:100px;
+  top:300px;
+}
+.catalogShowImage{
+  position: absolute;
+  left:100px;
+  top:300px;
+}
+
+.lyricsHide,.lyricsShow{
+  position:absolute;
+  top:192px;
+  left:100px;
+  display: inline-block;
+  height: 38px;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 40px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#CCCCCC), to(#999999));
+  color: #666666;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.lyricsHide{
+  display:none;
+}
+
+.repeatAllSongs,.repeatCurrentSong,.buttonLast,.buttonNext{
+
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#CCCCCC), to(#999999));
+  color: #666666;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.repeatCurrentSong{
+	display: none;
+  position:absolute;
+  top:500px;
+  left:940px;
+}
+
+.repeatAllSongs{
+	display: none;
+  position:absolute;
+  top:500px;
+  left:840px;
+}
+.buttonLast{
+	display: none;
+  position:absolute;
+  top:550px;
+  left:700px;
+}
+
+
+
+.buttonNext{
+	display: none;
+  position:absolute;
+  top:550px;
+  left:1060px;
+}
